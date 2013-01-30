@@ -19,9 +19,10 @@ int main(int argc, const char * argv[])
             NSURL *trashed;
             NSError *error;
             if ([fm trashItemAtURL:url resultingItemURL:&trashed error:&error]) {
-                NSLog(@"trashed %@ to %@", url, trashed);
+                fprintf(stdout, "trashed %s to %s\n", [[url path] UTF8String], [[trashed path] UTF8String]);
             } else {
-                NSLog(@"failed to trash %@", url);
+                fprintf(stderr, "failed to trash %s\n", [[url path] UTF8String]);
+                return 1;
             }
         }
     }
