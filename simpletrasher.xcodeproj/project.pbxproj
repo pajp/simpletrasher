@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A1CFAB116B93C38009134A9 /* test.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test.sh; sourceTree = "<group>"; };
 		3ACFDBA516B68EC5004594FE /* simpletrasher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simpletrasher; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFDBA916B68EC5004594FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3ACFDBAC16B68EC5004594FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 				3ACFDBAC16B68EC5004594FE /* main.m */,
 				3ACFDBB016B68EC5004594FE /* simpletrasher.1 */,
 				3ACFDBAE16B68EC5004594FE /* Supporting Files */,
+				3A1CFAB116B93C38009134A9 /* test.sh */,
 			);
 			path = simpletrasher;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 				3ACFDBA116B68EC5004594FE /* Sources */,
 				3ACFDBA216B68EC5004594FE /* Frameworks */,
 				3ACFDBA316B68EC5004594FE /* CopyFiles */,
+				3A1CFAB316B93CDB009134A9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +136,22 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A1CFAB316B93CDB009134A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/simpletrasher/test.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ACFDBA116B68EC5004594FE /* Sources */ = {
@@ -236,6 +255,7 @@
 				3ACFDBB616B68EC5004594FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
