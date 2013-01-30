@@ -13,6 +13,10 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         NSFileManager *fm = [NSFileManager defaultManager];
+        if (argc == 1) {
+            fprintf(stderr, "Please supply one or more file names.\n");
+            return 1;            
+        }
         for (int i=1; i < argc; i++) {
             const char* file_to_trash = argv[i];
             NSURL *url = [NSURL fileURLWithPath:[NSString stringWithUTF8String:file_to_trash]];
