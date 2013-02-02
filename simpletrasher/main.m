@@ -23,9 +23,9 @@ int main(int argc, const char * argv[])
             NSURL *trashed;
             NSError *error;
             if ([fm trashItemAtURL:url resultingItemURL:&trashed error:&error]) {
-                fprintf(stdout, "trashed %s to %s\n", [[url path] UTF8String], [[trashed path] UTF8String]);
+                fprintf(stdout, "Trashed %s to %s\n", [[url path] UTF8String], [[trashed path] UTF8String]);
             } else {
-                fprintf(stderr, "failed to trash %s\n", [[url path] UTF8String]);
+                fprintf(stderr, "Failed to trash %s: %s\n", [[url path] UTF8String], [[error localizedDescription] UTF8String]);
                 return 1;
             }
         }
